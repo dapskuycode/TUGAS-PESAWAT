@@ -1,20 +1,20 @@
 public class Schedules {
-    private String departureTime;
+    private String boardingTime;
     private String arriveTime;
     private Airports airport;
     private Airports airportDestination;
 
     // Constructor
-    public Schedules(String departureTime, String arriveTime, Airports airport, Airports airportDestination) {
-        this.departureTime = departureTime;
+    public Schedules(String boardingTime, String arriveTime, Airports airport, Airports airportDestination) {
+        this.boardingTime = boardingTime;
         this.arriveTime = arriveTime;
         this.airport = airport;
         this.airportDestination = airportDestination;
     }
 
     // Getters and Setters
-    public String getDepartureTime() { return departureTime; }
-    public void setDepartureTime(String departureTime) { this.departureTime = departureTime; }
+    public String getboardingTime() { return boardingTime; }
+    public void setboardingTime(String boardingTime) { this.boardingTime = boardingTime; }
 
     public String getArriveTime() { return arriveTime; }
     public void setArriveTime(String arriveTime) { this.arriveTime = arriveTime; }

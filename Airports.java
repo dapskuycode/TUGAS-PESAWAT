@@ -2,12 +2,14 @@ public class Airports {
     private String airport;
     private String city;
     private String province;
+    private String country;
 
     // Constructor
-    public Airports(String airport, String city, String province) {
+    public Airports(String airport, String city, String province, String country) {
         this.airport = airport;
         this.city = city;
         this.province = province;
+        this.country = country;
     }
 
     // Getters and Setters
@@ -19,4 +21,7 @@ public class Airports {
 
     public String getProvince() { return province; }
     public void setProvince(String province) { this.province = province; }
+
+    public String getCountry() { return country; }
+    public void setCountry(String country) { this.country = country; }
 }
