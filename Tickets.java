@@ -1,14 +1,14 @@
 public class Tickets {
     private String bookingCode;
-    private Customers orderName;
+    private Customers customerName;
     private Schedules schedule;
     private Plane plane;
     private String ticketClass;
     private String seatNumber;
 
-    public Tickets(String bookingCode, Customers orderName, Schedules schedule, Plane plane, String ticketClass, String seatNumber) {
+    public Tickets(String bookingCode, Customers customerName, Schedules schedule, Plane plane, String ticketClass, String seatNumber) {
         this.bookingCode = bookingCode;
-        this.orderName = orderName;
+        this.customerName = customerName;
         this.schedule = schedule;
         this.plane = plane;
         this.ticketClass = ticketClass;
@@ -18,8 +18,8 @@ public class Tickets {
     public String getBookingCode() { return bookingCode; }
     public void setBookingCode(String bookingCode) { this.bookingCode = bookingCode; }
 
-    public Customers getOrderName() { return orderName; }
-    public void setOrderName(Customers orderName) { this.orderName = orderName; }
+    public Customers getOrderName() { return customerName; }
+    public void setOrderName(Customers orderName) { this.customerName = customerName; }
 
     public Schedules getSchedule() { return schedule; }
     public void setSchedule(Schedules schedule) { this.schedule = schedule; }
