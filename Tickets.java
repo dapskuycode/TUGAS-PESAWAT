@@ -1,13 +1,11 @@
 public class Tickets {
-    private String orderDate;
     private Schedules schedule;
     private Airlines airline;
     private String seatNumber;
     private String ticketClass;
 
     // Constructor
-    public Tickets(String orderDate, Schedules schedule, Airlines airline, String seatNumber, String ticketClass) {
-        this.orderDate = orderDate;
+    public Tickets(Schedules schedule, Airlines airline, String seatNumber, String ticketClass) {
         this.schedule = schedule;
         this.airline = airline;
         this.seatNumber = seatNumber;
@@ -15,8 +13,6 @@ public class Tickets {
     }
 
     // Getters and Setters
-    public String getOrderDate() { return orderDate; }
-    public void setOrderDate(String orderDate) { this.orderDate = orderDate; }
 
     public Schedules getSchedule() { return schedule; }
     public void setSchedule(Schedules schedule) { this.schedule = schedule; }
