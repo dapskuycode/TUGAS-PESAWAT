@@ -10,4 +10,12 @@ public class CommercialPlane extends Plane {
     // Getters and Setters
     public int getPassengerCapacity() { return passengerCapacity; }
     public void setPassengerCapacity(int passengerCapacity) { this.passengerCapacity = passengerCapacity; }
+
+    // Implementasi abstract method
+    public void printInfoPlane() {
+        System.out.println("ID Plane: " + getIdPlane());
+        System.out.println("Model Plane: " + getModelPlane());
+        System.out.println("Airline: " + getAirline().getAirlineName());
+        System.out.println("Passenger Capacity: " + getPassengerCapacity() + " passengers");
+    }
 }

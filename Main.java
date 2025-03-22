@@ -34,5 +34,8 @@ public class Main {
         System.out.println("Arrival: " + ticket1.getSchedule().getAirportDestination().getAirport());
         System.out.println("Boarding Time: " + ticket1.getSchedule().getboardingTime());
         System.out.println("Seat Number: " + ticket1.getSeatNumber());
+        System.out.println("Ticket Class: " + ticket1.getTicketClass());
+        System.out.println("Passenger Capacity: " + ((CommercialPlane) ticket1.getPlane()).getPassengerCapacity() + " passengers");
+        
     }
 }

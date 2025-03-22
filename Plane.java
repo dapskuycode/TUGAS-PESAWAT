@@ -1,4 +1,4 @@
-public class Plane {
+abstract class Plane {
     private String idPlane;
     private String modelPlane;
     private Airlines airline;
@@ -19,4 +19,7 @@ public class Plane {
 
     public Airlines getAirline() { return airline; }
     public void setAirline(Airlines airline) { this.airline = airline; }
+
+    // Abstract Method
+    public abstract void printInfoPlane();
 }

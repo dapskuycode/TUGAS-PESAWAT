@@ -14,4 +14,10 @@ public class Airlines {
 
     public String getCountry() { return country; }
     public void setCountry(String country) { this.country = country; }
+
+    // Method
+    public void printInfoAirlines() {
+        System.out.println("Airline: " + getAirlineName());
+        System.out.println("Country: " + getCountry());
+    }
 }

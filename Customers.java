@@ -31,4 +31,16 @@ public class Customers {
 
     public List<Tickets> getListOfTicket() { return listOfTicket; }
     public void setListOfTicket(List<Tickets> listOfTicket) { this.listOfTicket = listOfTicket; }
+
+    // Method
+    public void printInfoCustomers() {
+        System.out.println("NIK: " + getNik());
+        System.out.println("Name: " + getName());
+        System.out.println("Phone Number: " + getPhoneNumber());
+        System.out.println("Email: " + getEmail());
+        System.out.println("List of Ticket: ");
+        for (Tickets ticket : listOfTicket) {
+            ticket.printInfoTickets();
+        }
+    }
 }

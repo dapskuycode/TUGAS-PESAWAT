@@ -24,4 +24,12 @@ public class Airports {
 
     public String getCountry() { return country; }
     public void setCountry(String country) { this.country = country; }
+
+    // Method
+    public void printInfoAirports() {
+        System.out.println("Airport: " + getAirport());
+        System.out.println("City: " + getCity());
+        System.out.println("Province: " + getProvince());
+        System.out.println("Country: " + getCountry());
+    }
 }

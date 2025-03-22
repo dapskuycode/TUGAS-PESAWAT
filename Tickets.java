@@ -32,4 +32,16 @@ public class Tickets {
 
     public String getSeatNumber() { return seatNumber; }
     public void setSeatNumber(String seatNumber) { this.seatNumber = seatNumber; }
+
+    public void printInfoTickets(){
+        System.out.println("Booking Code: " + bookingCode);
+        System.out.println("Customer Name: " + customerName.getName());
+        System.out.println("Schedule: " + schedule.getboardingTime() + " - " + schedule.getArriveTime());
+        System.out.println("Airport: " + schedule.getAirport());
+        System.out.println("Plane: " + plane.getIdPlane());
+        System.out.println("Model Plane: " + plane.getModelPlane());
+        System.out.println("Airline: " + plane.getAirline().getAirlineName());
+        System.out.println("Ticket Class: " + ticketClass);
+        System.out.println("Seat Number: " + seatNumber);
+    }
 }

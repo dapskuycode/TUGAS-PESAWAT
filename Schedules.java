@@ -24,4 +24,18 @@ public class Schedules {
 
     public Airports getAirportDestination() { return airportDestination; }
     public void setAirportDestination(Airports airportDestination) { this.airportDestination = airportDestination; }
+
+    // Method
+    public void printInfoSchedules() {
+        System.out.println("Boarding Time: " + getboardingTime());
+        System.out.println("Arrive Time: " + getArriveTime());
+        System.out.println("Airport: " + airport.getAirport());
+        System.out.println("City: " + airport.getCity());
+        System.out.println("Province: " + airport.getProvince());
+        System.out.println("Country: " + airport.getCountry());
+        System.out.println("Airport Destination: " + airportDestination.getAirport());
+        System.out.println("City Destination: " + airportDestination.getCity());
+        System.out.println("Province Destination: " + airportDestination.getProvince());
+        System.out.println("Country Destination: " + airportDestination.getCountry());
+    }
 }
