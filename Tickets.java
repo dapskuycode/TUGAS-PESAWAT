@@ -19,7 +19,7 @@ public class Tickets {
     public void setBookingCode(String bookingCode) { this.bookingCode = bookingCode; }
 
     public Customers getOrderName() { return customerName; }
-    public void setOrderName(Customers orderName) { this.customerName = customerName; }
+    public void setOrderName(Customers orderName) { this.customerName = orderName; }  
 
     public Schedules getSchedule() { return schedule; }
     public void setSchedule(Schedules schedule) { this.schedule = schedule; }
