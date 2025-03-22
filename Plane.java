@@ -1,7 +1,7 @@
 abstract class Plane {
-    private String idPlane;
-    private String modelPlane;
-    private Airlines airline;
+    protected String idPlane;
+    protected String modelPlane;
+    protected Airlines airline;
 
     // Constructor
     public Plane(String idPlane, String modelPlane, Airlines airline) {
@@ -11,13 +11,13 @@ abstract class Plane {
     }
 
     // Getters and Setters
-    public String getIdPlane() { return idPlane; }
+    protected String getIdPlane() { return idPlane; }
     public void setIdPlane(String idPlane) { this.idPlane = idPlane; }
 
-    public String getModelPlane() { return modelPlane; }
+    protected String getModelPlane() { return modelPlane; }
     public void setModelPlane(String modelPlane) { this.modelPlane = modelPlane; }
 
-    public Airlines getAirline() { return airline; }
+    protected Airlines getAirline() { return airline; }
     public void setAirline(Airlines airline) { this.airline = airline; }
 
     // Abstract Method
