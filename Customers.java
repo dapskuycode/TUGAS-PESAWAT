@@ -17,20 +17,40 @@ public class Customers {
     }
 
     // Getters and Setters
-    public String getNik() { return nik; }
-    public void setNik(String nik) { this.nik = nik; }
+    public String getNik() { 
+        return nik; 
+    }
+    public void setNik(String nik) { 
+        this.nik = nik; 
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getName() { 
+        return name; 
+    }
+    public void setName(String name) { 
+        this.name = name; 
+    }
 
-    public String getPhoneNumber() { return phoneNumber; }
-    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+    public String getPhoneNumber() { 
+        return phoneNumber; 
+    }
+    public void setPhoneNumber(String phoneNumber) { 
+        this.phoneNumber = phoneNumber; 
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public String getEmail() { 
+        return email; 
+    }
+    public void setEmail(String email) { 
+        this.email = email; 
+    }
 
-    public List<Tickets> getListOfTicket() { return listOfTicket; }
-    public void setListOfTicket(List<Tickets> listOfTicket) { this.listOfTicket = listOfTicket; }
+    public List<Tickets> getListOfTicket() { 
+        return listOfTicket; 
+    }
+    public void setListOfTicket(List<Tickets> listOfTicket) { 
+        this.listOfTicket = listOfTicket; 
+    }
 
     // Method
     public void printInfoCustomers() {
@@ -41,7 +61,7 @@ public class Customers {
         System.out.println("List of Ticket: ");
         for (Tickets T : listOfTicket) {
             System.out.println("- " + T.getBookingCode() + ", " 
-            + T.getSchedule().getboardingTime() + ", "
+            + T.getSchedule().getBoardingTime() + ", "
             + T.getSchedule().getAirport().getAirport() + ", "
             + T.getPlane().getIdPlane() + ", "
             + T.getPlane().getAirline().getAirlineName() + ", "

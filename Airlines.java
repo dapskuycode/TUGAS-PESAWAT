@@ -13,11 +13,26 @@ public class Airlines {
     }
 
     // Getters and Setters
-    public String getAirlineName() { return airlineName; }
-    public void setAirlineName(String airlineName) { this.airlineName = airlineName; }
+    public String getAirlineName() { 
+        return airlineName; 
+    }
+    public void setAirlineName(String airlineName) { 
+        this.airlineName = airlineName; 
+    }
 
-    public String getCountry() { return country; }
-    public void setCountry(String country) { this.country = country; }
+    public String getCountry() {
+        return country; 
+    }
+    public void setCountry(String country) { 
+        this.country = country; 
+    }
+
+    public List<Planes> getListOfPlane() { 
+        return listOfPlane; 
+    }
+    public void setListOfTicket(List<Planes> listOfPlane) { 
+        this.listOfPlane = listOfPlane; 
+    } 
 
     // Method
     public void printInfoAirlines() {

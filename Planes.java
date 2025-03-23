@@ -12,14 +12,26 @@ public abstract class Planes {
     }
 
     // Getters and Setters
-    protected String getIdPlane() { return idPlane; }
-    public void setIdPlane(String idPlane) { this.idPlane = idPlane; }
+    protected String getIdPlane() { 
+        return idPlane; 
+    }
+    public void setIdPlane(String idPlane) { 
+        this.idPlane = idPlane; 
+    }
 
-    protected String getModelPlane() { return modelPlane; }
-    public void setModelPlane(String modelPlane) { this.modelPlane = modelPlane; }
+    protected String getModelPlane() { 
+        return modelPlane; 
+    }
+    public void setModelPlane(String modelPlane) { 
+        this.modelPlane = modelPlane; 
+    }
 
-    protected Airlines getAirline() { return airline; }
-    public void setAirline(Airlines airline) { this.airline = airline; }
+    protected Airlines getAirline() { 
+        return airline; 
+    }
+    public void setAirline(Airlines airline) { 
+        this.airline = airline; 
+    }
 
     // Abstract Method
     public abstract void printInfoPlane();

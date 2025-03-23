@@ -8,8 +8,12 @@ public class CommercialPlanes extends Planes {
     }
 
     // Getters and Setters
-    public int getPassengerCapacity() { return passengerCapacity; }
-    public void setPassengerCapacity(int passengerCapacity) { this.passengerCapacity = passengerCapacity; }
+    public int getPassengerCapacity() {
+        return passengerCapacity; 
+    }
+    public void setPassengerCapacity(int passengerCapacity) { 
+        this.passengerCapacity = passengerCapacity; 
+    }
 
     // Implementasi abstract method
     public void printInfoPlane() {

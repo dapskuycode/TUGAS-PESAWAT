@@ -10,11 +10,19 @@ public class CargoPlanes extends Planes {
     }
 
     // Getters and Setters
-    public int getCargoCapacity() { return cargoCapacity; }
-    public void setCargoCapacity(int cargoCapacity) { this.cargoCapacity = cargoCapacity; }
+    public int getCargoCapacity() { 
+        return cargoCapacity; 
+    }
+    public void setCargoCapacity(int cargoCapacity) { 
+        this.cargoCapacity = cargoCapacity; 
+    }
 
-    public String getCargoType() { return cargoType; }
-    public void setCargoType(String cargoType) { this.cargoType = cargoType; }
+    public String getCargoType() { 
+        return cargoType; 
+    }
+    public void setCargoType(String cargoType) { 
+        this.cargoType = cargoType; 
+    }
 
     // Implementasi abstract method
     public void printInfoPlane() {

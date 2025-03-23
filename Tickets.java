@@ -1,3 +1,4 @@
+import java.time.format.DateTimeFormatter;
 
 public class Tickets {
     private String bookingCode;
@@ -8,7 +9,7 @@ public class Tickets {
     private String seatNumber;
     private static int counterTicket = 0;
 
-    
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
     public Tickets(String bookingCode, Customers customerName, Schedules schedule, Planes plane, String ticketClass, String seatNumber) {
         this.bookingCode = bookingCode;
@@ -20,32 +21,57 @@ public class Tickets {
         counterTicket ++;
     }
 
-    public String getBookingCode() { return bookingCode; }
-    public void setBookingCode(String bookingCode) { this.bookingCode = bookingCode; }
+    public String getBookingCode() { 
+        return bookingCode; 
+    }
+    public void setBookingCode(String bookingCode) { 
+        this.bookingCode = bookingCode; 
+    }
 
-    public Customers getOrderName() { return customerName; }
-    public void setOrderName(Customers orderName) { this.customerName = orderName; }  
+    public Customers getOrderName() { 
+        return customerName; 
+    }
+    public void setOrderName(Customers orderName) { 
+        this.customerName = orderName; 
+    }  
 
-    public Schedules getSchedule() { return schedule; }
-    public void setSchedule(Schedules schedule) { this.schedule = schedule; }
+    public Schedules getSchedule() { 
+        return schedule; 
+    }
+    public void setSchedule(Schedules schedule) { 
+        this.schedule = schedule; 
+    }
 
-    public Planes getPlane() { return plane; }
-    public void setPlane(Planes plane) { this.plane = plane; }
+    public Planes getPlane() { 
+        return plane; 
+    }
+    public void setPlane(Planes plane) { 
+        this.plane = plane; 
+    }
 
-    public String getTicketClass() { return ticketClass; }
-    public void setTicketClass(String ticketClass) { this.ticketClass = ticketClass; }
+    public String getTicketClass() { 
+        return ticketClass; 
+    }
+    public void setTicketClass(String ticketClass) { 
+        this.ticketClass = ticketClass; 
+    }
 
-    public String getSeatNumber() { return seatNumber; }
-    public void setSeatNumber(String seatNumber) { this.seatNumber = seatNumber; }
+    public String getSeatNumber() { 
+        return seatNumber; 
+    }
+    public void setSeatNumber(String seatNumber) { 
+        this.seatNumber = seatNumber; 
+    }
 
     public static void PrintCounterTicket(){
+
         System.out.println("Jumlah tiket : " + counterTicket);
     }
 
     public void printDetailTickets(){
         System.out.println("Booking Code: " + getBookingCode());
         System.out.println("Customer Name: " + customerName.getName());
-        System.out.println("Schedule: " + schedule.getboardingTime() + " - " + schedule.getArriveTime());
+        System.out.println("Schedule: " + schedule.getBoardingTime().format(formatter) + " - " + schedule.getArriveTime().format(formatter));
         System.out.println("Airport: " + schedule.getAirport().getAirport());
         System.out.println("Airport Destination: " + schedule.getAirportDestination().getAirport());
         System.out.println("Plane: " + plane.getIdPlane());

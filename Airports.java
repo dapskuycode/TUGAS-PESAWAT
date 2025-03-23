@@ -13,17 +13,33 @@ public class Airports {
     }
 
     // Getters and Setters
-    public String getAirport() { return airport; }
-    public void setAirport(String airport) { this.airport = airport; }
+    public String getAirport() { 
+        return airport; 
+    }
+    public void setAirport(String airport) {
+        this.airport = airport; 
+    }
 
-    public String getCity() { return city; }
-    public void setCity(String city) { this.city = city; }
+    public String getCity() {
+        return city; 
+    }
+    public void setCity(String city) {
+        this.city = city; 
+    }
 
-    public String getProvince() { return province; }
-    public void setProvince(String province) { this.province = province; }
+    public String getProvince() {
+        return province; 
+    }
+    public void setProvince(String province) {
+        this.province = province; 
+    }
 
-    public String getCountry() { return country; }
-    public void setCountry(String country) { this.country = country; }
+    public String getCountry() {
+        return country; 
+    }
+    public void setCountry(String country) {
+        this.country = country; 
+    }
 
     // Method
     public void printInfoAirports() {
