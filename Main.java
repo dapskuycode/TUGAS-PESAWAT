@@ -11,8 +11,8 @@ public class Main {
         Airports airport2 = new Airports("Ngurah Rai International Airport", "Denpasar", "Bali", "Indonesia");
 
         // Membuat Pesawat
-        Planes plane1 = new CommercialPlanes("GA123", "Boeing 737", airline1, 180);
-        Planes plane2 = new CargoPlanes("GA456", "Airbus A330", airline1, 20000, "Paket");
+        Planes plane1 = new CommercialPlanes("GA123", "Boeing 737", airline1, 10);
+        Planes plane2 = new CargoPlanes("GA456", "Airbus A330", airline1,1210, "Paket");
 
         // Menambahkan pesawat ke list pesawat
         airline1.getListOfPlane().add(plane1);
@@ -23,7 +23,7 @@ public class Main {
         // ketika masuk ke blok catch, akan menampilkan pesan dari ScheduleException, dan kode program akan dihentikan
         Schedules schedule1 = null;
         try{
-            schedule1 = new Schedules("23-03-2025 10:00", "23-03-2025 09:00", airport1, airport2);
+            schedule1 = new Schedules("23-03-2025 10:00", "23-03-2025 19:00", airport1, airport2);
         }
         catch(ScheduleExpception e){
             System.out.println("Eror!" + e.getMessage());
@@ -31,7 +31,7 @@ public class Main {
         }
 
         // Membuat Customer
-        Customers customer1 = new Customers("1234567890123456", "John Doe", "0812399789", "johndoe@email.com", new ArrayList<>());
+        Customers customer1 = new Customers("1234567890132456", "John Doe", "0812339789", "johndoe@email.com", new ArrayList<>());
 
         // Membuat Tiket
         Tickets ticket1 = new Tickets("TK12345", customer1, schedule1, plane1, "Economy", "12A");

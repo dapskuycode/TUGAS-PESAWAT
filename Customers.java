@@ -12,7 +12,7 @@ public class Customers {
 
     // Constructor
     public Customers(String nik, String name, String phoneNumber, String email, List<Tickets> listOfTicket) {
-        assert nik.length() == 16 : "NIK harus memiliki minimal 16 digit!";
+        assert nik.length() == 16 : "NIK harus memiliki tepat digit!";
         assert phoneNumber.length() <= 15 && phoneNumber.length() >= 10: "Nomor telepon harus memiliki minimal 10 dan maksimal 15 digit!";
 
         this.nik = nik;
