@@ -4,6 +4,10 @@ public class CommercialPlanes extends Planes {
     // Constructor
     public CommercialPlanes(String idPlane, String modelPlane, Airlines airline, int passengerCapacity) {
         super(idPlane, modelPlane, airline);
+        
+        // Asersi: kapasitas penumpang harus lebih dari 0
+        assert passengerCapacity > 0 : "Kapasitas penumpang harus lebih dari 0!";
+
         this.passengerCapacity = passengerCapacity;
     }
 
@@ -11,7 +15,9 @@ public class CommercialPlanes extends Planes {
     public int getPassengerCapacity() {
         return passengerCapacity; 
     }
+    
     public void setPassengerCapacity(int passengerCapacity) { 
+        assert passengerCapacity > 0 : "Kapasitas penumpang harus lebih dari 0!"; // Asersi di setter
         this.passengerCapacity = passengerCapacity; 
     }
 

@@ -5,6 +5,10 @@ public class CargoPlanes extends Planes {
     // Constructor
     public CargoPlanes(String idPlane, String modelPlane, Airlines airline, int cargoCapacity, String cargoType) {
         super(idPlane, modelPlane, airline);
+        
+        // Asersi: kapasitas kargo harus lebih dari 0
+        assert cargoCapacity > 0 : "Kapasitas kargo harus lebih dari 0!";
+
         this.cargoCapacity = cargoCapacity;
         this.cargoType = cargoType;
     }
@@ -13,13 +17,16 @@ public class CargoPlanes extends Planes {
     public int getCargoCapacity() { 
         return cargoCapacity; 
     }
+    
     public void setCargoCapacity(int cargoCapacity) { 
+        assert cargoCapacity > 0 : "Kapasitas kargo harus lebih dari 0!"; // Asersi juga di setter
         this.cargoCapacity = cargoCapacity; 
     }
 
     public String getCargoType() { 
         return cargoType; 
     }
+    
     public void setCargoType(String cargoType) { 
         this.cargoType = cargoType; 
     }

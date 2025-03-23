@@ -9,6 +9,9 @@ public class Customers {
 
     // Constructor
     public Customers(String nik, String name, String phoneNumber, String email, List<Tickets> listOfTicket) {
+        assert nik.length() >= 16 : "NIK harus memiliki minimal 16 digit!";
+        assert phoneNumber.length() <= 15 && phoneNumber.length() >= 10: "Nomor telpom harus memiliki minimal 10 dan maksimal 15 digit!";
+
         this.nik = nik;
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -20,20 +23,25 @@ public class Customers {
     public String getNik() { 
         return nik; 
     }
+    
     public void setNik(String nik) { 
+        assert nik.length() >= 16 : "NIK harus memiliki minimal 16 digit!"; // Asersi di setter
         this.nik = nik; 
     }
 
     public String getName() { 
         return name; 
     }
+    
     public void setName(String name) { 
         this.name = name; 
     }
 
     public String getPhoneNumber() { 
+        assert phoneNumber.length() <= 15 && phoneNumber.length() >= 10: "Nomor telpom harus memiliki minimal 10 dan maksimal 15 digit!";
         return phoneNumber; 
     }
+    
     public void setPhoneNumber(String phoneNumber) { 
         this.phoneNumber = phoneNumber; 
     }
@@ -41,6 +49,7 @@ public class Customers {
     public String getEmail() { 
         return email; 
     }
+    
     public void setEmail(String email) { 
         this.email = email; 
     }
@@ -48,6 +57,7 @@ public class Customers {
     public List<Tickets> getListOfTicket() { 
         return listOfTicket; 
     }
+    
     public void setListOfTicket(List<Tickets> listOfTicket) { 
         this.listOfTicket = listOfTicket; 
     }

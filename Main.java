@@ -22,7 +22,7 @@ public class Main {
         Schedules schedule1 = new Schedules("23-03-2025 10:00", "23-03-2025 12:00", airport1, airport2);
 
         // Membuat Customer
-        Customers customer1 = new Customers("1234567890", "John Doe", "08123456789", "johndoe@email.com", new ArrayList<>());
+        Customers customer1 = new Customers("123456789012345", "John Doe", "08123456789", "johndoe@email.com", new ArrayList<>());
 
         // Membuat Tiket
         Tickets ticket1 = new Tickets("TK12345", customer1, schedule1, plane1, "Economy", "12A");
