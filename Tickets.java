@@ -41,4 +41,17 @@ public class Tickets {
     public static void PrintCounterTicket(){
         System.out.println("Jumlah tiket : " + counterTicket);
     }
+
+    public void printDetailTickets(){
+        System.out.println("Booking Code: " + getBookingCode());
+        System.out.println("Customer Name: " + customerName.getName());
+        System.out.println("Schedule: " + schedule.getboardingTime() + " - " + schedule.getArriveTime());
+        System.out.println("Airport: " + schedule.getAirport().getAirport());
+        System.out.println("Airport Destination: " + schedule.getAirportDestination().getAirport());
+        System.out.println("Plane: " + plane.getIdPlane());
+        System.out.println("Model Plane: " + plane.getModelPlane());
+        System.out.println("Airline: " + plane.getAirline().getAirlineName());
+        System.out.println("Ticket Class: " + getTicketClass());
+        System.out.println("Seat Number: " + getSeatNumber());
+    }
 }

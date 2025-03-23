@@ -26,14 +26,36 @@ public class Main {
         // Menambahkan tiket ke list customer
         customer1.getListOfTicket().add(ticket1);
 
-        // Menampilkan informasi tiket
-        System.out.println("--- Ticket Information ---");
-        System.out.println("Booking Code: " + ticket1.getBookingCode());
-        System.out.println("Customer Name: " + ticket1.getOrderName().getName());
-        System.out.println("Flight: " + ticket1.getPlane().getModelPlane() + " - " + ticket1.getPlane().getAirline().getAirlineName());
-        System.out.println("Departure: " + ticket1.getSchedule().getAirport().getAirport());
-        System.out.println("Arrival: " + ticket1.getSchedule().getAirportDestination().getAirport());
-        System.out.println("Boarding Time: " + ticket1.getSchedule().getboardingTime());
-        System.out.println("Seat Number: " + ticket1.getSeatNumber());
+        // // Menampilkan informasi tiket
+        // System.out.println("--- Ticket Information ---");
+        // System.out.println("Booking Code: " + ticket1.getBookingCode());
+        // System.out.println("Customer Name: " + ticket1.getOrderName().getName());
+        // System.out.println("Flight: " + ticket1.getPlane().getModelPlane() + " - " + ticket1.getPlane().getAirline().getAirlineName());
+        // System.out.println("Departure: " + ticket1.getSchedule().getAirport().getAirport());
+        // System.out.println("Arrival: " + ticket1.getSchedule().getAirportDestination().getAirport());
+        // System.out.println("Boarding Time: " + ticket1.getSchedule().getboardingTime());
+        // System.out.println("Seat Number: " + ticket1.getSeatNumber());
+        // System.out.println("Ticket Class: " + ticket1.getTicketClass());
+        // System.out.println("Passenger Capacity: " + ((CommercialPlane) ticket1.getPlane()).getPassengerCapacity() + " passengers");
+        
+
+        //method print masing masing class
+        System.out.println("\n--- Print Info Airlines ---");
+        airline1.printInfoAirlines();
+        System.out.println("\n--- Print Info Airports ---");
+        airport1.printInfoAirports();
+        System.out.println("\n--- Print Info Schedules ---");
+        schedule1.printInfoSchedules();
+        System.out.println("\n--- Print Info Customers ---");
+        customer1.printInfoCustomers();
+        System.out.println("\n--- Print Detail Tickets ---");
+        ticket1.printDetailTickets();
+        System.out.println("\n--- Print Detail Cargo Plane ---");
+        plane2.printInfoPlane();
+        System.out.println("\n--- Print Detail Commercial Plane ---");
+        plane1.printInfoPlane();
+        System.out.println("\n--- Print Detail Customers ---");
+        customer1.printInfoCustomers();
+
     }
 }

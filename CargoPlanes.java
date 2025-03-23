@@ -15,4 +15,13 @@ public class CargoPlanes extends Planes {
 
     public String getCargoType() { return cargoType; }
     public void setCargoType(String cargoType) { this.cargoType = cargoType; }
+
+    // Implementasi abstract method
+    public void printInfoPlane() {
+        System.out.println("ID Plane: " + getIdPlane());
+        System.out.println("Model Plane: " + getModelPlane());
+        System.out.println("Airline: " + getAirline().getAirlineName());
+        System.out.println("Cargo Capacity: " + getCargoCapacity() + " kg");
+        System.out.println("Cargo Type: " + getCargoType());
+    }
 }
