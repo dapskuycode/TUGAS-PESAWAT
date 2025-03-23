@@ -19,7 +19,14 @@ public class Main {
         airline1.getListOfPlane().add(plane2);
 
         // Membuat Jadwal Penerbangan
-        Schedules schedule1 = new Schedules("23-03-2025 10:00", "23-03-2025 09:00", airport1, airport2);
+        Schedules schedule1 = null;
+        try{
+            schedule1 = new Schedules("23-03-2025 10:00", "23-03-2025 09:00", airport1, airport2);
+        }
+        catch(ScheduleExpception e){
+            System.out.println("Eror!" + e.getMessage());
+            System.exit(1);
+        }
 
         // Membuat Customer
         Customers customer1 = new Customers("1234567890123456", "John Doe", "0812399789", "johndoe@email.com", new ArrayList<>());

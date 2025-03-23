@@ -10,29 +10,35 @@ public class Schedules {
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
     // Constructor
-    public Schedules(String boardingTime, String arriveTime, Airports airport, Airports airportDestination) {
+    public Schedules(String boardingTime, String arriveTime, Airports airport, Airports airportDestination) throws ScheduleExpception{
         this.boardingTime = LocalDateTime.parse(boardingTime, formatter);
         this.arriveTime = LocalDateTime.parse(arriveTime, formatter);
         this.airport = airport;
         this.airportDestination = airportDestination;
-
-        // Asersi: Waktu keberangkatan harus sebelum waktu kedatangan
-        assert this.boardingTime.isBefore(this.arriveTime) : "Waktu keberangkatan harus sebelum waktu kedatangan!";
+        // Eksepsi: Waktu keberangkatan harus sebelum waktu kedatangan
+        if(!this.boardingTime.isBefore(this.arriveTime)){
+            throw new ScheduleExpception();
+        }
+        
     }
 
     // Getters dan Setters
     public LocalDateTime getBoardingTime() { 
         return boardingTime; 
     }
-    public void setBoardingTime(String boardingTime) { 
+    public void setBoardingTime(String boardingTime) throws ScheduleExpception{ 
+        if(!this.boardingTime.isBefore(this.arriveTime)){
+            throw new ScheduleExpception();
+        }
         this.boardingTime = LocalDateTime.parse(boardingTime, formatter);
-        assert this.boardingTime.isBefore(this.arriveTime) : "Waktu keberangkatan harus sebelum waktu kedatangan!";
     }
 
     public LocalDateTime getArriveTime() { return arriveTime; }
-    public void setArriveTime(String arriveTime) { 
+    public void setArriveTime(String arriveTime) throws ScheduleExpception{ 
+        if(!this.boardingTime.isBefore(this.arriveTime)){
+            throw new ScheduleExpception();
+        }
         this.arriveTime = LocalDateTime.parse(arriveTime, formatter);
-        assert this.boardingTime.isBefore(this.arriveTime) : "Waktu keberangkatan harus sebelum waktu kedatangan!";
     }
 
     public Airports getAirport() { 
