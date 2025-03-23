@@ -1,10 +1,10 @@
-public class Plane {
+public class Planes {
     private String idPlane;
     private String modelPlane;
     private Airlines airline;
 
     // Constructor
-    public Plane(String idPlane, String modelPlane, Airlines airline) {
+    public Planes(String idPlane, String modelPlane, Airlines airline) {
         this.idPlane = idPlane;
         this.modelPlane = modelPlane;
         this.airline = airline;

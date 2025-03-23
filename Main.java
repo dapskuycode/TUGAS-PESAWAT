@@ -2,16 +2,17 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        List<Planes> LoP = new ArrayList<>(); 
         // Membuat Airlines
-        Airlines airline1 = new Airlines("Garuda Indonesia", "Indonesia");
+        Airlines airline1 = new Airlines("Garuda Indonesia", "Indonesia", LoP);
 
         // Membuat Airports
         Airports airport1 = new Airports("Soekarno-Hatta International Airport", "Jakarta", "DKI Jakarta", "Indonesia");
         Airports airport2 = new Airports("Ngurah Rai International Airport", "Denpasar", "Bali", "Indonesia");
 
         // Membuat Pesawat
-        Plane plane1 = new CommercialPlane("GA123", "Boeing 737", airline1, 180);
-        Plane plane2 = new CargoPlane("GA456", "Airbus A330", airline1, 20000, "Paket");
+        Planes plane1 = new CommercialPlanes("GA123", "Boeing 737", airline1, 180);
+        Planes plane2 = new CargoPlanes("GA456", "Airbus A330", airline1, 20000, "Paket");
 
         // Membuat Jadwal Penerbangan
         Schedules schedule1 = new Schedules("10:00 AM", "12:00 PM", airport1, airport2);

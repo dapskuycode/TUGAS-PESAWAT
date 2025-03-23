@@ -1,8 +1,8 @@
-public class CommercialPlane extends Plane {
+public class CommercialPlanes extends Planes {
     private int passengerCapacity;  // Kapasitas maksimum penumpang
 
     // Constructor
-    public CommercialPlane(String idPlane, String modelPlane, Airlines airline, int passengerCapacity) {
+    public CommercialPlanes(String idPlane, String modelPlane, Airlines airline, int passengerCapacity) {
         super(idPlane, modelPlane, airline);
         this.passengerCapacity = passengerCapacity;
     }

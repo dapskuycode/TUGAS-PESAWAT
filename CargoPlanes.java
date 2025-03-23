@@ -1,9 +1,9 @@
-public class CargoPlane extends Plane {
+public class CargoPlanes extends Planes {
     private int cargoCapacity;  // Kapasitas kargo dalam kg
     private String cargoType;   // Jenis kargo yang diangkut (misal: paket, bahan bakar, barang berbahaya)
 
     // Constructor
-    public CargoPlane(String idPlane, String modelPlane, Airlines airline, int cargoCapacity, String cargoType) {
+    public CargoPlanes(String idPlane, String modelPlane, Airlines airline, int cargoCapacity, String cargoType) {
         super(idPlane, modelPlane, airline);
         this.cargoCapacity = cargoCapacity;
         this.cargoType = cargoType;

@@ -1,11 +1,15 @@
+import java.util.List;
+
 public class Airlines {
     private String airlineName;
     private String country;
+    private List<Planes> listOfPlane;
 
     // Constructor
-    public Airlines( String airlineName, String country) {
+    public Airlines( String airlineName, String country, List<Planes> listOfPlane) {
         this.airlineName = airlineName;
         this.country = country;
+        this.listOfPlane = listOfPlane;
     }
 
     // Getters and Setters
