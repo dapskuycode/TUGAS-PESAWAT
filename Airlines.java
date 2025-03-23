@@ -38,5 +38,9 @@ public class Airlines {
     public void printInfoAirlines() {
         System.out.println("Airline: " + getAirlineName());
         System.out.println("Country: " + getCountry());
+        System.out.println("List of Plane: ");
+        for (Planes plane : listOfPlane) {
+            System.out.println("- ID Plane: " + plane.getIdPlane() + " Model Plane: " + plane.getModelPlane());
+        }
     }
 }

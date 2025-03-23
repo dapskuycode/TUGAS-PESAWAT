@@ -1,4 +1,5 @@
 import java.util.List;
+import java.time.format.DateTimeFormatter;
 
 public class Customers {
     private String nik;
@@ -6,6 +7,8 @@ public class Customers {
     private String phoneNumber;
     private String email;
     private List<Tickets> listOfTicket;
+
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
     // Constructor
     public Customers(String nik, String name, String phoneNumber, String email, List<Tickets> listOfTicket) {
@@ -71,7 +74,7 @@ public class Customers {
         System.out.println("List of Ticket: ");
         for (Tickets T : listOfTicket) {
             System.out.println("- " + T.getBookingCode() + ", " 
-            + T.getSchedule().getBoardingTime() + ", "
+            + T.getSchedule().getBoardingTime().format(formatter) + ", "
             + T.getSchedule().getAirport().getAirport() + ", "
             + T.getPlane().getIdPlane() + ", "
             + T.getPlane().getAirline().getAirlineName() + ", "
