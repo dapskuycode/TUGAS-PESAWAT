@@ -30,7 +30,8 @@ public class Airlines {
     public List<Planes> getListOfPlane() { 
         return listOfPlane; 
     }
-    public void setListOfTicket(List<Planes> listOfPlane) { 
+
+    public void setListOfPlane(List<Planes> listOfPlane) { 
         this.listOfPlane = listOfPlane; 
     } 
 
