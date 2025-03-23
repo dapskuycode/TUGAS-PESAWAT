@@ -18,7 +18,9 @@ public class Main {
         airline1.getListOfPlane().add(plane1);
         airline1.getListOfPlane().add(plane2);
 
-        // Membuat Jadwal Penerbangan
+        // Membuat Jadwal Penerbangan.
+        // Penggunaan eksepsi : ketika arrive time lebih dulu daripada boarding time, maka akan dilempar ke ScheduleException.
+        // ketika masuk ke blok catch, akan menampilkan pesan dari ScheduleException, dan kode program akan dihentikan
         Schedules schedule1 = null;
         try{
             schedule1 = new Schedules("23-03-2025 10:00", "23-03-2025 09:00", airport1, airport2);
